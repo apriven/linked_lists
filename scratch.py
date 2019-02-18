@@ -17,6 +17,13 @@ class HedgehogList(object):
         return None
 
     def add_last(self, number):
+        current = self.head
+        if current is None:
+            self.head = Hedgehog(number)
+            return None
+        while current.next != None:
+            current = current.next
+        current.next = Hedgehog(number)
         return None
 
     def get_length(self):
