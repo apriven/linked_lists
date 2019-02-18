@@ -11,7 +11,10 @@ class HedgehogList(object):
         return None
 
     def add_first(self, number):
-         return None
+        newHedgehog = Hedgehog(number)
+        newHedgehog.next = self.head
+        self.head = newHedgehog
+        return None
 
     def add_last(self, number):
         return None
